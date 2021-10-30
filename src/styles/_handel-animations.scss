@@ -1,0 +1,54 @@
+@mixin handelAnmy($propN, $propV, $dur:0.4s, $timFun:linear, $dely:0s) {
+    #{$propN}: $propV;
+    animation-duration: $dur;
+    animation-timing-function: $timFun;
+    animation-delay: $dely;    
+}
+
+// #headerSm, header, .app-navbar{ animation: fadeAnmy 1.5s linear 0s; }
+#headerSm, header, .app-navbar{ @include handelAnmy(opacity, 0, 1.5s, linear, 0s); }
+
+#Campuses, #services, #latestNews,  #upEvents{
+    h3{ @include handelAnmy(opacity, 0) }
+}
+
+#Campuses{
+    img{
+        @include handelAnmy(opacity, 0)
+    }
+    a{
+        @include handelAnmy(opacity, 0)
+    }
+}
+
+#services{
+    .services__item{
+        // opacity: 0;
+        @for $i from 1 through 8{
+            &:nth-of-type(#{$i}){ @include handelAnmy(opacity, 0, 0.4s, linear, 0.5s*$i); }
+        }
+    }    
+}
+
+#latestNews{
+    .latestNews__container__item{
+        overflow: hidden;
+        @include handelAnmy(opacity, 0, 0.7s, linear, 0s);        
+        &>a{ @include handelAnmy(opacity, 0, 0.7s, linear, 1s) }
+    }
+}
+
+#upEvents{
+    .upEvents__container__item{
+        div{ @include handelAnmy(opacity, 0, 0.5s, linear, 0s); }
+        p{ @include handelAnmy(opacity, 0, 0.5s, linear, 0s); }
+    }
+}
+
+#popup{
+    animation: popupAnmy 0.3s linear 0s;
+}
+
+#Deanery img{
+    @include handelAnmy(opacity, 0);
+}

@@ -1,0 +1,57 @@
+$light1: #606060;
+$dark1 : #16013E;
+$light2 : #fff;
+$color1 : #FF7F56;
+
+
+#upEvents{
+    padding-bottom: 18vh;
+    .upEvents__container{        
+        .upEvents__container__item{
+            display: grid;
+            grid-template-columns: 5rem auto;
+            grid-template-areas: "ev hd" "ev desc";
+            column-gap: 3vw;
+            row-gap: 1vh;
+            align-items: center;
+            margin-bottom: 5vh;
+            div{
+                grid-area: ev;
+                background-color: rgba($color1, 0.8);
+                padding-block: 0.5rem;
+                height: fit-content;
+                text-align: center;
+                border-radius: 0.75rem;
+                span{
+                    display: block;
+                    font-weight: 500;
+                    color: $light2;           
+                    &:last-of-type{ text-transform: uppercase; }
+                }
+            }
+            p{                
+                margin: 0;
+                &:first-of-type{ grid-area: hd; color: $dark1; }
+                &:last-of-type{ grid-area: desc; color: $light1; }
+            }
+        }
+    }
+
+    &>a{
+        width: fit-content;
+        padding: 0.75rem 2rem;
+        text-decoration: none;
+        display: block;
+        margin-right: auto;
+        margin-left: 0rem;
+        border-radius: 0.35rem;
+        text-transform: uppercase;
+        color: $light2;
+        background-color: $color1;
+        letter-spacing: 0.3vw;
+        font-size: calc(0.85rem + 0.2vw)!important;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out 0s;
+        &:hover{ background-color: rgba($color1, 0.8); }
+    }
+}

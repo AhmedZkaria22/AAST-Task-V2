@@ -1,0 +1,114 @@
+$light1 : #382959;
+$dark1 : #16013E;
+$light2 : #fff;
+$dark2 : #675A7D;
+$back1 : #F6F2FD;
+$color1 : #FF7F56;
+
+#headerSm{
+    .headerSm__controlls{
+        align-items: center;
+        justify-items: center;
+        display: grid;
+        grid-template-areas: 'btn form svg';
+        background-color: transparent;
+        padding-block: 0.2rem;
+        &>*{ width: fit-content; }
+        &>button, &>svg{ color: $light1; }
+        &>button{
+            grid-area: btn;
+            display: inline-block;
+            background-color: transparent;
+            border: none;
+            padding-inline: 0.75rem;            
+            border-radius: 0.35rem;                    
+        }
+        form{
+            grid-area: form;
+            display: inline-block;
+            border-radius: 0.5rem;
+            background-color: $light2;
+            *{ border: none; outline: none; box-shadow: none; 
+                padding: 0.2rem 0.75rem;
+                color: $dark2;
+                background-color: transparent;
+                font-size: 1.2rem;
+            }
+            button{
+                svg{ color: inherit; padding: 0; }
+            }
+        }
+        svg{
+            grid-area: svg;
+            cursor: pointer;
+            font-size: 1rem!important;
+        }
+    }
+    .small-nav{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        padding: 3vh 3vw;
+        background-color: rgba($back1, 0.85);
+        z-index: 999999;
+        .scr-small{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            background-color: transparent;
+            padding: 0;
+            position: relative;
+            *{ width: fit-content; }
+            a{ display: block;  clear: both; padding: 0; margin-bottom: 2vh; 
+                color: $light1;
+                text-decoration: none; 
+                &:hover{ color: $color1; }
+            }
+            .phone-navbar__link{
+                display: flex;
+                align-items: center;
+                margin-bottom: 2vh;
+                &>*{ color: $light1; }
+                &:hover{ &>*{color: $color1;} }
+                &>a{ margin-bottom: 0vh; }
+                svg{ display: inline-block;  font-size: inherit;
+                    padding-top: 4px;
+                    margin-left: 0.5rem;   
+                    cursor: pointer;
+                }                        
+            }
+            .phone-navbar__link-list__container{
+                padding-left: 5vw;
+                display: none;
+                position: static;                
+            }
+            .small-nav__close{
+                cursor: pointer;
+                display: block;
+                position: absolute;
+                top: 3vh;
+                right: 5vw;
+                color: $color1;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+    }
+    .headerSm__hero{
+        justify-content: flex-start;
+        .header__container__col{
+            &:nth-of-type(2){ padding-block: 2rem; }
+            img{ 
+                object-fit: fill;
+                width: 90%;
+            }                
+            h3{
+                color: $color1;
+            }
+            p{ color: $dark1; font-size: 1.5rem; }
+        }            
+    }  
+}

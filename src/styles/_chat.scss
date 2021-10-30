@@ -1,0 +1,139 @@
+$light1: #606060;
+$dark1 : #16013E;
+$light2 : #fff;
+$dark2 : #C7BDDD;
+$back1 : #F6F2FD;
+$color1 : #FF7F56;
+#chat{    
+    &>svg{
+        position: fixed;
+        top: 82vh;
+        right: 1vw;
+        padding: 0rem;        
+        font-size: 1.5rem;
+        color: $color1;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 99999;
+    }
+    .chat-main{
+        position: fixed;
+        top: 45vh;
+        right: calc( 1.8rem + 1vw );
+        padding: 0rem;        
+        background-color: $light2;
+        border: 3px solid $color1;
+        border-radius: 0.5rem;
+        height: 55vh;
+        width: 27vw;
+        transition: all 0.5s ease-in-out 0s;    
+        z-index: 999;
+        *{ font-size: calc(0.7rem + .2vw)!important; } 
+        p, select, input, textarea{ color: $light1;  font-weight: 500; }
+        p{ margin: 0; }
+        select, input, textarea{ width: 100%; }
+        .chat-main__head{           
+            background-color: $color1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.35rem;
+            position: relative;
+            // cursor: grab;
+            &>*{ color: $back1!important; font-weight: 700;}
+            svg{ cursor: pointer; 
+                position: absolute;
+                right: 8%;
+            }
+        }
+        .chat-main__form{ 
+            transition: all 0.5s ease-in-out 0s;
+            overflow-y: scroll;
+            height: calc(100% - 2rem);
+            padding: 2vh 2vw 0vh;      
+            &>button{ 
+                padding-left: 0;
+                color: $color1;
+                border: none; 
+                background-color: transparent;  margin: 1rem 0rem 0.75rem;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: 0.3rem;
+                font-size: calc(0.8rem + .3vw) !important;
+                svg{ font-size: inherit!important;  color: inherit; }
+            }
+            &::-webkit-scrollbar { width: 5px; }
+            &::-webkit-scrollbar-thumb { background-color: #606060;  color: $back1;  border-radius: 5px; }      
+        
+            .chat-main__oper-hours{
+                display: none;
+                &>p{ 
+                    font-weight: 600;
+                    margin-top: 3vh; 
+                    color: $dark1;
+                    font-size: calc(0.75rem + .3vw) !important;
+                }
+                select{         
+                    font-size: 1rem;                              
+                    border: 2px solid $dark2;
+                    border-radius: 0.25rem;
+                    margin-bottom: 0.25rem;
+                    &:hover, &:focus{ border: 2px solid $dark2;  box-shadow: none;  outline: none; }
+                    option{ font-size: 1rem; }
+                }
+                .chat-main__oper-hours__details{
+                    p{
+                        font-size: 1rem;  font-weight: 500;
+                        &.oper-hours-light{ font-size: 0.85rem;  font-weight: 500; padding-left: 1rem;  }
+                    }
+                }
+            }
+
+            .chat-main__sign__google{   margin-top: 2vh;
+                span{
+                    color: $dark1;
+                    font-size: calc(0.75rem + .3vw) !important;
+                    font-weight: 600;
+                    &:last-of-type{ display: block;  width: 100%;  text-align: center;   
+                        color: $color1;
+                        background-color: transparent;  
+                        font-weight: 800;
+                        text-transform: uppercase;                        
+                        letter-spacing: 0.3rem;
+                        font-size: calc(0.8rem + .3vw) !important;
+                    }
+                }
+                button{
+                    background-color: transparent;
+                    border: none;
+                    &:first-of-type{ svg{ font-size: 1.3rem!important; } }
+                    &:last-of-type{ svg{ font-size: 1.0rem!important; } }
+                    svg{ color: $light1; }
+                }
+            }
+
+            form{
+                label{ 
+                    font-weight: 600;
+                    margin-top: 3vh;
+                    color: $dark1;
+                    font-size: calc(0.75rem + .3vw) !important;
+                }
+                input, textarea{ 
+                    border: none;  background-color: $back1; border-radius: 0.5rem 0.5rem 0rem 0rem; 
+                    padding: 0.35rem 0.5rem;
+                    &:hover, &:focus{ border: none;  box-shadow: none;  outline: none; }
+                }
+                input:first-of-type{ margin-bottom: 2vh; }
+                div{ color: #ff1717; display: none; }
+                p.successSubmit{ color: #008000; }
+                button{ 
+                    background-color: #53a7dbc7;  color: white; 
+                    background-color: $color1;  color: $back1; 
+                    width: 100%; border: none;   padding-block: 0.35rem; 
+                    border-radius: 0.5rem 0.5rem 0rem 0rem;     margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+}

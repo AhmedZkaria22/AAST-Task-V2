@@ -1,0 +1,38 @@
+$back1 : #F6F2FD;
+$color3 : #713EDD;
+
+
+#Campuses{
+    .campuses__container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: calc(0.5rem + 0.5vw);
+        .campuses__container__item{
+            position: relative;
+            height: 36vh;
+            overflow: hidden;
+            border-radius: 0.35rem 0.35rem 0rem 0rem;
+            img{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;     height: 100%;
+            }
+            a{
+                display: block;
+                color: $back1;
+                background-color: rgba($color3, 0.75);
+                padding-block: calc(0.5rem + 0.5vw);
+                z-index: 9999;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

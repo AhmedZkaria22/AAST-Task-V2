@@ -1,0 +1,65 @@
+$dark1 : #16013E;
+$light2 : #fff;
+$color1 : #FF7F56;
+
+.AppCarousel{
+    height: calc(36vh + 16vw);
+    width: 99vw!important;
+    margin: 0!important;
+    padding: 0vh 5vw!important;   
+    position: relative; 
+    overflow: hidden!important;
+    #carouselControls{
+        height: calc(100% - 1rem);
+        z-index: 999;
+        overflow: hidden;
+        border-radius: 1rem 1rem 0rem 0rem;
+        border: 0.3rem solid $light2;
+        border-bottom-width: 0.65rem;
+        .carousel-inner{
+            height: 100%;
+            position: relative;
+            &::after{
+                position: absolute;
+                top: 0;     left: 0;    width: inherit;     height: inherit;
+                content: "";
+                background-color: #F6F2FD29;
+            }         
+            .carousel-item{
+                height: 100%;
+                img{
+                    height: 100%;
+                    object-fit: fill;
+                }
+            }
+        }
+        .carousel-control-prev{margin-left: 2vw;} 
+        .carousel-control-next{margin-right: 2vw;}
+        .carousel-control-prev, .carousel-control-next{
+            height: fit-content;
+            top: 44%;
+            justify-content: flex-start;
+            width: max-content;           
+            opacity: 1;
+            background-color: rgba($dark1, 0.3);
+            border-radius: 1.0rem; 
+            padding: 0.3rem 0.2rem;
+            &:hover{ background-color: rgba($dark1, 0.5); }
+            .carousel-control-prev-icon, .carousel-control-next-icon{
+                width: 1.25rem;    height: 1.25rem;
+
+            }
+        }
+    }
+    
+    .AppCarousel__bottom{
+        height: 1rem!important;
+        width: 89vw!important;
+        background-color: $light2;
+        border-top: 0.3rem solid $dark1;
+        border-bottom: 0.3rem solid $dark1;
+        position: absolute;
+        top: calc(100% - 1rem);
+        left: 5vw;    
+    }
+}

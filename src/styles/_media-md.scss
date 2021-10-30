@@ -1,0 +1,129 @@
+@media screen and (min-width: 576px) and (max-width: 900px){
+    
+    #Campuses{
+        .campuses__container{
+            grid-template-columns: repeat(3, 1fr)!important;
+            grid-template-rows: repeat(3, 1fr)!important;
+            grid-gap: calc(0.5rem + 0.5vw)!important;
+            .campuses__container__item{                
+                height: calc(24vh + 10vw)!important;
+            }
+        }
+    }
+
+    #services{    
+        .row{            
+            .services__item{
+                &:nth-of-type(-n+6){ margin-bottom: 7.5vh!important; }
+            }
+        }
+    }
+
+    @media screen and (min-width: 576px) and (max-width: 786px){
+
+        #headerSm{
+            .headerSm__controlls{
+                &>*{ font-size: calc(0.8rem + 0.15vw)!important;}
+                &>button{ padding: 0.25rem 0.65rem; }
+                form{
+                    *{font-size: calc(0.8rem + 0.15vw)!important;}                    
+                    input{ width: 35vw; padding: 0!important;}
+                }
+            }
+            .headerSm__hero{
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                .header__container__col{
+                    &:nth-of-type(2){ padding-block: 0rem!important; }
+                    img{ width: 100%!important; }                
+                    h3{
+                        font-size: calc(1.2rem + 0.25vw)!important;
+                        letter-spacing: 0.2rem!important;
+                        font-weight: 700!important;
+                        margin-bottom: 0.25rem!important;
+                        text-align: center!important;
+                    }
+                    p{ font-size: calc(1.1rem + 0.2vw) !important; }
+                }            
+            }
+        }
+
+        .AppCarousel{ margin: 0vh auto 0vh!important; }
+    
+        #latestNews{   
+            .latestNews__container{
+                grid-template-columns: repeat(2, 1fr)!important;
+                grid-template-areas: 'new1 new2' 'new3 new3';
+                .latestNews__container__item{
+                    margin-bottom: 4vh;          
+                    a{ 
+                        background-color: transparent!important;
+                        color: $color2!important; 
+                    }          
+                }
+            }
+        }
+
+        #Deanery{
+            padding-top: 5vh!important;
+            .Deanery__container{
+                .row{
+                    flex-direction: column!important;
+                    &>div{                
+                        &:first-of-type{              
+                            margin: 0 auto!important;
+                        }
+                        &:last-of-type{
+                            h3{
+                                font-size: calc(1.5rem + 0.5vw)!important;
+                                letter-spacing: 1px!important;
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+
+        footer{
+            .footer__grid{
+                grid-template-columns: 50% 46% !important;
+                grid-template-areas: "imgcol lnks1col" "imgcol lnks2col" "imgcol soctcol" !important;
+                column-gap: 4vw;
+                .footer__grid__col{
+                    &:nth-of-type(1){
+                        .footer__grid__col__img-wrapper{
+                            grid-template-columns: 1fr!important;
+                            grid-template-rows: repeat(4, 1fr)!important;
+                            img{                
+                                width: 65%!important;
+                                border-radius: 0.5rem!important;
+                                height: 30vh!important;
+                                border: none!important;
+                            }
+                        }
+                        a{
+                            width: 65%!important;
+                            text-align: center!important; 
+                        }
+                    }
+                    &:nth-of-type(4){
+                        flex-direction: column!important;
+                        justify-content: flex-start!important;
+                        align-items: flex-start!important;
+                        .footer__grid__col-last{
+                            &>a:last-of-type{ display: block; }
+                        }
+                    }
+        
+                }
+            }
+        }
+
+        #chat{
+            .chat-main{
+                width: 35vw!important;
+            }
+        }
+    }
+}

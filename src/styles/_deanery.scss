@@ -1,0 +1,62 @@
+$light2 : #fff;
+$dark2 : #C7BDDD;
+$back1 : #F6F2FD;
+
+#Deanery{
+    width: 100%!important;
+    margin-inline: 0!important;
+    background: linear-gradient(180deg, #1B0842 0%, #2E1C50 50%);
+    .Deanery__container{
+        padding: 5vh 5vw;
+        .row{
+            align-items: start;
+            justify-content: space-between;
+            &>div{                
+                &:first-of-type{
+                    display: flex;
+                    height: calc(29vh + 13vw) !important;              
+                    .DeaneryImgBack{
+                        width: 80%;   margin-left: 0;   margin-right: auto;
+                        background-color: $back1;
+                        position: relative;   
+                        border-radius: 1rem;
+                        img{
+                            position: absolute;
+                            top: 7.5%;
+                            left: 10%;
+                            height: 85%;
+                            width: 102%;
+                            border-radius: 0.5rem;
+                        }    
+                        @media screen and(max-width: 992px) {
+                            width: 90%!important;   
+                            margin-inline: auto!important;
+                            border-radius: 5rem!important;
+                            height: 7vh!important;
+                            img{
+                                top: 3vh!important;
+                                left: 5%!important;
+                                height: calc(22vh + 13vw) !important;
+                                width: 90%!important;                                
+                            }
+                        }                
+                    }
+                }
+                &:last-of-type{
+                    h3{
+                        text-align: left;
+                        color: $light2;
+                        font-weight: 600;   
+                        font-size: calc(1.8rem + 0.5vw);
+                        letter-spacing: 2px;
+                    } 
+                    p{
+                        color: $dark2;
+                        font-size: calc(1.0rem + 0.15vw);
+                        font-weight: 400;
+                    }            
+                }
+            }
+        }
+    }
+}

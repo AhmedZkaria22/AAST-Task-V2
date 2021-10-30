@@ -1,0 +1,126 @@
+// $light1 : #382959;
+$light1: #606060;
+$dark1 : #16013E;
+$light2 : #fff;
+$dark2 : #C7BDDD;
+$back1 : #F6F2FD;
+$back2 : #1B0842, #2E1C50;
+$color1 : #FF7F56;
+$color2 : #FFD15D;
+$color3 : #713EDD;
+$color4 : #713EDB;
+$color5 : #5A2BAF;
+
+*:not(script){
+    box-sizing: border-box;
+    &:not(img){
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+    ::-webkit-scrollbar-button{ color: #252b2e;  background-color: #EBEEFA; }
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-thumb { background-color: #252b2e;  color: #EBEEFA;  border-radius: 7px; }      
+}
+
+body{ background-color: $back1; }
+
+
+.cardButton{
+    border: none;   
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    width: 50%;  left: 25%;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-block: 1.5vh;
+    // color: white !important;
+    color: white;
+    background-color: #53a7dbc7;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-block: 1.5vh;
+    // box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    &:hover{ color: white; }
+}
+
+.btnTop{
+    position: fixed;
+    top: 72vh;
+    right: 1vw;
+    padding: 0.1rem 0.35rem 0.15rem;
+    border-radius: 0.35rem;
+    border: none;
+    // background-color: #252b2e;
+    // color: #EBEEFA;
+    // color: #53a7dbc7;
+    background-color: $light2;
+    color: $color1;
+    z-index: 9999999;
+}
+
+#popup{
+    position: fixed;
+    top: 0;     left: 0;
+    background-color: #33333385;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999999;
+    img{
+        position: fixed;
+        top: 7.5vh;
+        left: 5vw;
+        width: 90vw;
+        height: 85vh;
+        object-fit: fill;
+    }
+
+    button{
+        color: #d2d2d2;     
+        background-color: cornflowerblue;
+        padding: 0.35rem 0.75rem;
+        position: fixed;
+        top: 10vh;
+        left: 6vw;
+        border: none;
+    }
+}
+
+h3{ 
+    text-align: center; 
+    // color: #294B75; 
+    color: $dark1;
+    text-transform: uppercase;
+    margin: 0vh auto 5vh;
+    letter-spacing: 0.3rem;
+}
+
+p{ font-size: calc(0.75rem + .25vw);  color: #252b2e; }
+
+.headP{font-size: 0.9rem; font-weight: 700;}
+.txtP{font-size: 0.75rem;}
+
+.AppCarousel, #Campuses, #services, #latestNews,  #upEvents,  #Deanery{
+    width: 90vw;
+    // margin: 12vh auto 0vh;
+    // padding-bottom: 12vh;
+    margin: 0vh auto;
+    padding-top: 24vh;
+    overflow: auto;
+    clear: both;
+}
+
+header, #Deanery{
+    h3{  
+        letter-spacing: 2px;
+        font-size: calc(1.8rem + 0.5vw);
+        font-weight: 600;    
+    }
+}
+
+.AppCarousel{ padding-bottom: 0!important; }
+
+#Deanery{ margin-bottom: 0!important; padding-bottom: 0!important; overflow: hidden!important;}

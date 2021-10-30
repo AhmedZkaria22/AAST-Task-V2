@@ -1,0 +1,50 @@
+$light1 : #382959;
+$light2 : #fff;
+$back1 : #F6F2FD;
+$color1 : #FF7F56;
+.app-navbar.scr-no-small{
+    background-color: transparent;
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem 0.85rem; 
+    gap: 0vh 1.25vw;
+    border-bottom: 0.1rem solid #E8E4F0;
+    a{ text-decoration: none; cursor: pointer;  font-size: calc( 0.7rem + 0.2vw );  font-weight: 600; }     
+    &>a{
+        color: $light1;
+        &:hover{ color: $color1; }       
+    } 
+    .navbar__link-list{
+        position: relative;        
+        a{
+            color: $light1;
+            display: block;     
+            &:hover{ color: $color1; }
+            svg{ font-size: 0.8rem; color: inherit; }
+        }
+        .navbar__link-list__container{
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;      
+            z-index: 99999;    
+            background-color: $light1;
+            border-top: 0.5rem double $color1;
+            padding: 1.5rem 1rem;
+            width: fit-content;
+            animation: navAnmy 0.6s ease-in-out;
+            padding-block: 1rem;
+            a{
+                display: block;
+                margin: 0;  margin-bottom: 0.75rem;
+                width: max-content;
+                color: $back1;
+                font-weight: 500;
+                &:hover{ color: $color1; }
+                &:last-of-type{ margin-bottom: 0rem; }
+            }
+        }
+    }    
+}
