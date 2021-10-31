@@ -23,6 +23,33 @@ import HeaderSm from './components/HeaderSm';
 function App() {
   const [wd, setWd] = useState(document.body.clientWidth);
   window.addEventListener('resize', ()=>{ setWd(document.body.clientWidth); });
+  const handelDown = (ev) => {
+    const ch = document.querySelector('#chat .chat-main');
+    let prevX = ev.clientX;
+    let prevY = ev.clientY;
+
+    const handMove = (e) => {
+        let newX = prevX - e.clientX;
+        let newY = prevY - e.clientY;
+
+        const rect = ch.getBoundingClientRect();
+        ch.style.left = ''+(rect.left - newX)+'px';
+        ch.style.top = ''+(rect.top - newY)+'px';
+        ch.style.userSelect = 'none';
+        ch.style.cursor = 'grabbing';
+
+        prevX = e.clientX;
+        prevY = e.clientY;
+    }
+
+    const handUp = () => {
+        ch.style.cursor = 'grab';
+        window.removeEventListener('mousemove', handMove);
+        window.removeEventListener('mouseup', handUp);
+    }
+    window.addEventListener('mousemove', handMove);
+    window.addEventListener('mouseup', handUp);
+  }
   
   return (
     <div className="App">
@@ -43,7 +70,7 @@ function App() {
           handelNavHeadFade();
         }}>Close</button>
       </section>
-      <Chat />
+      <Chat handelDown={handelDown}/>
       <button className='btnTop' onClick={() => { window.scrollTo(0,0); }}> <FaAngleUp /> </button>
     </div>
   );

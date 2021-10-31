@@ -4,7 +4,7 @@ import { AiOutlineMinus } from 'react-icons/ai';
 import { BsFillChatFill } from 'react-icons/bs';
 import { HiCursorClick } from 'react-icons/hi';
 
-function Chat() {
+function Chat({handelDown}) {
     const [chatHoursListener, setChatHoursListener] = useState(Boolean);
     const [headHours, setHeadHours] = useState('Show');
     const handelChatHours = () => {
@@ -79,38 +79,6 @@ function Chat() {
             if( labels[i].style.display === 'none' ){ setCounter( prevState => prevState + 1 );
             }else{ setCounter( prevState => prevState + 0 ); }
         }
-    }
-
-    const handelDown = (ev) => {
-        const ch = document.querySelector('#chat .chat-main');
-        // const ch = e.target.parentElement;
-        let prevX = ev.clientX;
-        let prevY = ev.clientY;
-
-        const handMove = (e) => {
-            let newX = prevX - e.clientX;
-            let newY = prevY - e.clientY;
-
-            const rect = ch.getBoundingClientRect();
-            // ch.classList.add('perCarActive');
-            ch.style.cursor = 'grabbing';
-            // ch.style.position = 'absolute';
-            ch.style.position = 'fixed';
-            ch.style.left = `${rect.left - newX}px`;
-            ch.style.top = `${rect.top - newY}px`;
-
-            prevX = e.clientX;
-            prevY = e.clientY;
-        }
-
-        const handUp = () => {
-            // ch.classList.remove('perCarActive');
-            ch.style.cursor = 'grab';
-            window.removeEventListener('mousemove', handMove);
-            window.removeEventListener('mouseup', handUp);
-        }
-        window.addEventListener('mousemove', handMove);
-        window.addEventListener('mouseup', handUp);
     }
 
     return (
