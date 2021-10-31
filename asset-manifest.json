@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/AAST-Task-V2/static/css/main.4793e473.chunk.css",
-    "main.js": "/AAST-Task-V2/static/js/main.2a60b6ad.chunk.js",
-    "main.js.map": "/AAST-Task-V2/static/js/main.2a60b6ad.chunk.js.map",
+    "main.css": "/AAST-Task-V2/static/css/main.3cd05753.chunk.css",
+    "main.js": "/AAST-Task-V2/static/js/main.2711eb3d.chunk.js",
+    "main.js.map": "/AAST-Task-V2/static/js/main.2711eb3d.chunk.js.map",
     "runtime-main.js": "/AAST-Task-V2/static/js/runtime-main.efdefb20.js",
     "runtime-main.js.map": "/AAST-Task-V2/static/js/runtime-main.efdefb20.js.map",
     "static/css/2.0a9ec390.chunk.css": "/AAST-Task-V2/static/css/2.0a9ec390.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.08ee7242.chunk.js.map": "/AAST-Task-V2/static/js/3.08ee7242.chunk.js.map",
     "index.html": "/AAST-Task-V2/index.html",
     "static/css/2.0a9ec390.chunk.css.map": "/AAST-Task-V2/static/css/2.0a9ec390.chunk.css.map",
-    "static/css/main.4793e473.chunk.css.map": "/AAST-Task-V2/static/css/main.4793e473.chunk.css.map",
+    "static/css/main.3cd05753.chunk.css.map": "/AAST-Task-V2/static/css/main.3cd05753.chunk.css.map",
     "static/js/2.41581fae.chunk.js.LICENSE.txt": "/AAST-Task-V2/static/js/2.41581fae.chunk.js.LICENSE.txt",
     "static/media/01.46bad109.jpg": "/AAST-Task-V2/static/media/01.46bad109.jpg",
     "static/media/02.dac77431.jpg": "/AAST-Task-V2/static/media/02.dac77431.jpg",
@@ -38,7 +38,7 @@
     "static/js/runtime-main.efdefb20.js",
     "static/css/2.0a9ec390.chunk.css",
     "static/js/2.41581fae.chunk.js",
-    "static/css/main.4793e473.chunk.css",
-    "static/js/main.2a60b6ad.chunk.js"
+    "static/css/main.3cd05753.chunk.css",
+    "static/js/main.2711eb3d.chunk.js"
   ]
 }
