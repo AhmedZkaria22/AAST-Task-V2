@@ -2337,7 +2337,7 @@ footer .footer__copyright p {
   color: #FF7F56;
   background-color: transparent;
   cursor: pointer;
-  z-index: 99999;
+  z-index: 9999999;
 }
 #chat .chat-main {
   position: fixed;
@@ -2351,7 +2351,7 @@ footer .footer__copyright p {
   width: 27vw;
   -webkit-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
-  z-index: 999;
+  z-index: 999999;
 }
 #chat .chat-main * {
   font-size: calc(0.7rem + .2vw) !important;

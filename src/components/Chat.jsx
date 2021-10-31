@@ -81,11 +81,11 @@ function Chat() {
         }
     }
 
-    const handelDown = (e) => {
+    const handelDown = (ev) => {
         const ch = document.querySelector('#chat .chat-main');
-
-        let prevX = e.clientX;
-        let prevY = e.clientY;
+        // const ch = e.target.parentElement;
+        let prevX = ev.clientX;
+        let prevY = ev.clientY;
 
         const handMove = (e) => {
             let newX = prevX - e.clientX;
@@ -94,9 +94,10 @@ function Chat() {
             const rect = ch.getBoundingClientRect();
             // ch.classList.add('perCarActive');
             ch.style.cursor = 'grabbing';
-            ch.style.position = 'absolute';
-            ch.style.left = rect.left - newX + 'px';
-            ch.style.top = rect.top - newY + 'px';
+            // ch.style.position = 'absolute';
+            ch.style.position = 'fixed';
+            ch.style.left = `${rect.left - newX}px`;
+            ch.style.top = `${rect.top - newY}px`;
 
             prevX = e.clientX;
             prevY = e.clientY;
@@ -108,8 +109,6 @@ function Chat() {
             window.removeEventListener('mousemove', handMove);
             window.removeEventListener('mouseup', handUp);
         }
-
-
         window.addEventListener('mousemove', handMove);
         window.addEventListener('mouseup', handUp);
     }
@@ -123,7 +122,7 @@ function Chat() {
                 document.querySelector('.chat-main').style.opacity = '1';
             }}/>
             <div className="chat-main">
-                <div className="chat-main__head" onMouseDown={(e) => {handelDown(e)}}>
+                <div className="chat-main__head" onMouseDown={handelDown}>
                     <p>AAST Support</p>
                     <AiOutlineMinus onClick={() => {
                         document.querySelector('.chat-main').style.top = '82vh';

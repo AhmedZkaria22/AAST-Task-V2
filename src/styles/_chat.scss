@@ -14,7 +14,7 @@ $color1 : #FF7F56;
         color: $color1;
         background-color: transparent;
         cursor: pointer;
-        z-index: 99999;
+        z-index: 9999999;
     }
     .chat-main{
         position: fixed;
@@ -27,7 +27,7 @@ $color1 : #FF7F56;
         height: 55vh;
         width: 27vw;
         transition: all 0.5s ease-in-out 0s;    
-        z-index: 999;
+        z-index: 999999;
         *{ font-size: calc(0.7rem + .2vw)!important; } 
         p, select, input, textarea{ color: $light1;  font-weight: 500; }
         p{ margin: 0; }
