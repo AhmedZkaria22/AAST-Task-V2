@@ -1,93 +1,34 @@
-@keyframes headerAnmy1{
-    0%{ opacity: 0;  margin-left: -20vw; }
-    100%{ opacity: 1;  margin-left: 0vw; }
+@mixin handelAnmy2Step($keyframeN, $propSN, $propSV, $propEN, $propEV) {
+    @keyframes #{$keyframeN} {
+        0%{ opacity: 0; #{$propSN}: $propSV}
+        100%{ opacity: 100; #{$propEN}: $propEV}
+    }
 }
 
-@keyframes headerAnmy2{
-    0%{ opacity: 0;  margin-top: -1.75rem; }
-    50%{ opacity: 0.3;  margin-top: -0.75rem; }
-    100%{ opacity: 1;  margin-top: 0rem; }
-}
+@include handelAnmy2Step(navAnmy, top, 120%, top, 100%);
+@include handelAnmy2Step(navAnmy2, top, 100%, top, 120%);
 
-@keyframes navAnmy{
-    0%{ opacity: 0;  top: 120%; }
-    100%{ opacity: 1;  top: 100%; }
-}
+@include handelAnmy2Step(smallNav1, left, -110%, left, 0%);
+@include handelAnmy2Step(smallNav2, left, 0%, left, -110%);
 
-@keyframes navAnmy2{    
-    0%{ opacity: 1;  top: 100%; }
-    100%{ opacity: 0;  top: 120%; }
-}
+@keyframes fadeAnmy{ 0%{ opacity: 0; }   100%{ opacity: 1; } }
 
-@keyframes chatHours1{
-    0%{ opacity: 0;  margin-top: -5vh; }
-    100%{ opacity: 1;  margin-top: 0vh; }
-}
+@include handelAnmy2Step(scHdsAnmy, transform, translateY(-12vh), transform, translateY(0vh));
 
-@keyframes chatHours2{    
-    0%{ opacity: 1;  margin-top: 0vh; }
-    100%{ opacity: 0;  margin-top: -5vh; }
-}
+@include handelAnmy2Step(campsImgAnmy, transform, translateY(-100%), transform, translateY(0%));
+@include handelAnmy2Step(campsLnkAnmy, transform, translateY(+50%), transform, translateY(0%));
 
-@keyframes smallNav1{
-    0%{ opacity: 0;  left: -110%; }
-    100%{ opacity: 1;  left: 0%; }
-}
+@include handelAnmy2Step(srvsItmsAnmy, transform, translateY(-5rem), transform, translateY(0rem));
 
-@keyframes smallNav2{
-    0%{ opacity: 1;  left: 0%; }
-    100%{ opacity: 0;  left: -110%; }    
-}
+@include handelAnmy2Step(newsLnkAnmy, transform, translateY(+4rem), transform, translateY(0rem));
 
-@keyframes fadeAnmy{
-    0%{ opacity: 0; }
-    100%{ opacity: 1; }
-}
+@include handelAnmy2Step(evnsDivAnmy, transform, scale(0), transform, scale(1));
+@include handelAnmy2Step(evnsPAnmy, transform, translateX(-60%), transform, translateX(0%));
 
-@keyframes scHdsAnmy{
-    0%{ opacity: 0; transform: translateY(-12vh); }
-    100%{ opacity: 1; transform: translateY(0vh); }
-}
+@include handelAnmy2Step(deanImgAnmyLg, transform, translateX(+6rem), transform, translateX(0rem));
+@include handelAnmy2Step(deanImgAnmySm, transform, translateY(-100%), transform, translateY(0%));
 
-@keyframes campsImgAnmy{
-    0%{ opacity: 0; transform: translateY(-100%); }
-    100%{ opacity: 1; transform: translateY(0%); }
-}
-@keyframes campsLnkAnmy{
-    0%{ opacity: 0; transform: translateY(+50%); }
-    100%{ opacity: 1; transform: translateY(0%); }
-}
+@include handelAnmy2Step(popupAnmy, transform, scale(0), transform, scale(1));
 
-@keyframes srvsItmsAnmy{
-    0%{ opacity: 0; transform: translateY(-5rem); }
-    100%{ opacity: 1; transform: translateY(0rem); }
-}
-
-@keyframes newsLnkAnmy{
-    0%{ opacity: 0; transform: translateY(+4rem); }
-    100%{ opacity: 1; transform: translateY(0rem); }
-}
-
-@keyframes evnsDivAnmy{
-    0%{ opacity: 0; transform: scale(0); }
-    100%{ opacity: 1; transform: scale(1); }
-}
-@keyframes evnsPAnmy{
-    0%{ opacity: 0; transform: translateX(-60%); }
-    100%{ opacity: 1; transform: translateX(0%); }
-}
-
-
-@keyframes popupAnmy{
-    0%{ opacity: 0; transform: scale(0); }
-    100%{ opacity: 1; transform: scale(1); }
-}
-
-@keyframes deanImgAnmyLg{
-    0%{ opacity: 0; transform: translateX(+6rem); }
-    100%{ opacity: 1; transform: translateX(0rem); }
-}
-@keyframes deanImgAnmySm{
-    0%{ opacity: 0; transform: translateY(-100%); }
-    100%{ opacity: 1; transform: translateY(0%); }
-}
+@include handelAnmy2Step(chatHours1, margin-top, -5vh, margin-top, 0vh);
+@include handelAnmy2Step(chatHours2, margin-top, 0vh, margin-top, -5vh);

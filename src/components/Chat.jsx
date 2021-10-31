@@ -88,6 +88,7 @@ function Chat({handelDown}) {
                 document.querySelector('.chat-main').style.width = '27vw';
                 document.querySelector('.chat-main').style.height = '55vh';
                 document.querySelector('.chat-main').style.opacity = '1';
+                document.querySelector('.chat-main').style.zIndex = '999999';                
             }}/>
             <div className="chat-main">
                 <div className="chat-main__head" onMouseDown={handelDown}>
@@ -97,6 +98,7 @@ function Chat({handelDown}) {
                         document.querySelector('.chat-main').style.width = '0vw';
                         document.querySelector('.chat-main').style.height = '0vh';
                         document.querySelector('.chat-main').style.opacity = '0';
+                        document.querySelector('.chat-main').style.zIndex = '-4';
                     }}/>
                 </div>
                 <div className="chat-main__form">

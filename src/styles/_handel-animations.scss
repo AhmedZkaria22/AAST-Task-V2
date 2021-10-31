@@ -2,28 +2,22 @@
     #{$propN}: $propV;
     animation-duration: $dur;
     animation-timing-function: $timFun;
-    animation-delay: $dely;    
+    animation-delay: $dely;     
 }
 
-// #headerSm, header, .app-navbar{ animation: fadeAnmy 1.5s linear 0s; }
-#headerSm, header, .app-navbar{ @include handelAnmy(opacity, 0, 1.5s, linear, 0s); }
+#headerSm, header, .app-navbar{ animation: none 1.5s linear 0s; }
 
 #Campuses, #services, #latestNews,  #upEvents{
     h3{ @include handelAnmy(opacity, 0) }
 }
 
 #Campuses{
-    img{
-        @include handelAnmy(opacity, 0)
-    }
-    a{
-        @include handelAnmy(opacity, 0)
-    }
+    img{ @include handelAnmy(opacity, 0) }
+    a{ @include handelAnmy(opacity, 0) }
 }
 
 #services{
     .services__item{
-        // opacity: 0;
         @for $i from 1 through 8{
             &:nth-of-type(#{$i}){ @include handelAnmy(opacity, 0, 0.4s, linear, 0.5s*$i); }
         }
@@ -45,10 +39,6 @@
     }
 }
 
-#popup{
-    animation: popupAnmy 0.3s linear 0s;
-}
+#popup{ animation: popupAnmy 0.3s linear 0s; }
 
-#Deanery img{
-    @include handelAnmy(opacity, 0);
-}
+#Deanery img{ @include handelAnmy(opacity, 0); }

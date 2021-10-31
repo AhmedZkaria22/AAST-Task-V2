@@ -5,7 +5,7 @@
 
 ### Technologies
 * React JS - Functional component, Jsx, Ecma
-* Scss - Partial files, Mixins, Media query
+* Scss - Partial files, Mixins, Animations, Media query
 * Github
 
 
@@ -26,6 +26,7 @@
 
 #### Find me :
 - Gmail     ahmedzkaria372017@gmail.com 
+- LinkedIn  https://www.linkedin.com/in/ahmed-zakaria-a554a4183
 - Facebook  https://www.facebook.com/profile.php?id=100009428856148 
     
 > - *Don't forget to tell me with any bugs or updates app need*

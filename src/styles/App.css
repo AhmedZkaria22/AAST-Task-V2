@@ -132,133 +132,45 @@ header h3, #Deanery h3 {
   overflow: hidden !important;
 }
 
-@-webkit-keyframes headerAnmy1 {
-  0% {
-    opacity: 0;
-    margin-left: -20vw;
-  }
-  100% {
-    opacity: 1;
-    margin-left: 0vw;
-  }
-}
-
-@keyframes headerAnmy1 {
-  0% {
-    opacity: 0;
-    margin-left: -20vw;
-  }
-  100% {
-    opacity: 1;
-    margin-left: 0vw;
-  }
-}
-@-webkit-keyframes headerAnmy2 {
-  0% {
-    opacity: 0;
-    margin-top: -1.75rem;
-  }
-  50% {
-    opacity: 0.3;
-    margin-top: -0.75rem;
-  }
-  100% {
-    opacity: 1;
-    margin-top: 0rem;
-  }
-}
-@keyframes headerAnmy2 {
-  0% {
-    opacity: 0;
-    margin-top: -1.75rem;
-  }
-  50% {
-    opacity: 0.3;
-    margin-top: -0.75rem;
-  }
-  100% {
-    opacity: 1;
-    margin-top: 0rem;
-  }
-}
 @-webkit-keyframes navAnmy {
   0% {
     opacity: 0;
     top: 120%;
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     top: 100%;
   }
 }
+
 @keyframes navAnmy {
   0% {
     opacity: 0;
     top: 120%;
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     top: 100%;
   }
 }
 @-webkit-keyframes navAnmy2 {
   0% {
-    opacity: 1;
+    opacity: 0;
     top: 100%;
   }
   100% {
-    opacity: 0;
+    opacity: 100;
     top: 120%;
   }
 }
 @keyframes navAnmy2 {
   0% {
-    opacity: 1;
+    opacity: 0;
     top: 100%;
   }
   100% {
-    opacity: 0;
+    opacity: 100;
     top: 120%;
-  }
-}
-@-webkit-keyframes chatHours1 {
-  0% {
-    opacity: 0;
-    margin-top: -5vh;
-  }
-  100% {
-    opacity: 1;
-    margin-top: 0vh;
-  }
-}
-@keyframes chatHours1 {
-  0% {
-    opacity: 0;
-    margin-top: -5vh;
-  }
-  100% {
-    opacity: 1;
-    margin-top: 0vh;
-  }
-}
-@-webkit-keyframes chatHours2 {
-  0% {
-    opacity: 1;
-    margin-top: 0vh;
-  }
-  100% {
-    opacity: 0;
-    margin-top: -5vh;
-  }
-}
-@keyframes chatHours2 {
-  0% {
-    opacity: 1;
-    margin-top: 0vh;
-  }
-  100% {
-    opacity: 0;
-    margin-top: -5vh;
   }
 }
 @-webkit-keyframes smallNav1 {
@@ -267,7 +179,7 @@ header h3, #Deanery h3 {
     left: -110%;
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     left: 0%;
   }
 }
@@ -277,27 +189,27 @@ header h3, #Deanery h3 {
     left: -110%;
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     left: 0%;
   }
 }
 @-webkit-keyframes smallNav2 {
   0% {
-    opacity: 1;
+    opacity: 0;
     left: 0%;
   }
   100% {
-    opacity: 0;
+    opacity: 100;
     left: -110%;
   }
 }
 @keyframes smallNav2 {
   0% {
-    opacity: 1;
+    opacity: 0;
     left: 0%;
   }
   100% {
-    opacity: 0;
+    opacity: 100;
     left: -110%;
   }
 }
@@ -324,7 +236,7 @@ header h3, #Deanery h3 {
             transform: translateY(-12vh);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateY(0vh);
             transform: translateY(0vh);
   }
@@ -336,7 +248,7 @@ header h3, #Deanery h3 {
             transform: translateY(-12vh);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateY(0vh);
             transform: translateY(0vh);
   }
@@ -348,7 +260,7 @@ header h3, #Deanery h3 {
             transform: translateY(-100%);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
@@ -360,7 +272,7 @@ header h3, #Deanery h3 {
             transform: translateY(-100%);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
@@ -372,7 +284,7 @@ header h3, #Deanery h3 {
             transform: translateY(50%);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
@@ -384,7 +296,7 @@ header h3, #Deanery h3 {
             transform: translateY(50%);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
@@ -396,7 +308,7 @@ header h3, #Deanery h3 {
             transform: translateY(-5rem);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateY(0rem);
             transform: translateY(0rem);
   }
@@ -408,7 +320,7 @@ header h3, #Deanery h3 {
             transform: translateY(-5rem);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateY(0rem);
             transform: translateY(0rem);
   }
@@ -420,7 +332,7 @@ header h3, #Deanery h3 {
             transform: translateY(4rem);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateY(0rem);
             transform: translateY(0rem);
   }
@@ -432,7 +344,7 @@ header h3, #Deanery h3 {
             transform: translateY(4rem);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateY(0rem);
             transform: translateY(0rem);
   }
@@ -444,7 +356,7 @@ header h3, #Deanery h3 {
             transform: scale(0);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
@@ -456,7 +368,7 @@ header h3, #Deanery h3 {
             transform: scale(0);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
@@ -468,7 +380,7 @@ header h3, #Deanery h3 {
             transform: translateX(-60%);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
@@ -480,33 +392,9 @@ header h3, #Deanery h3 {
             transform: translateX(-60%);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
-  }
-}
-@-webkit-keyframes popupAnmy {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@keyframes popupAnmy {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 @-webkit-keyframes deanImgAnmyLg {
@@ -516,7 +404,7 @@ header h3, #Deanery h3 {
             transform: translateX(6rem);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateX(0rem);
             transform: translateX(0rem);
   }
@@ -528,7 +416,7 @@ header h3, #Deanery h3 {
             transform: translateX(6rem);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateX(0rem);
             transform: translateX(0rem);
   }
@@ -540,7 +428,7 @@ header h3, #Deanery h3 {
             transform: translateY(-100%);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
@@ -552,19 +440,78 @@ header h3, #Deanery h3 {
             transform: translateY(-100%);
   }
   100% {
-    opacity: 1;
+    opacity: 100;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
 }
+@-webkit-keyframes popupAnmy {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 100;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes popupAnmy {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 100;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes chatHours1 {
+  0% {
+    opacity: 0;
+    margin-top: -5vh;
+  }
+  100% {
+    opacity: 100;
+    margin-top: 0vh;
+  }
+}
+@keyframes chatHours1 {
+  0% {
+    opacity: 0;
+    margin-top: -5vh;
+  }
+  100% {
+    opacity: 100;
+    margin-top: 0vh;
+  }
+}
+@-webkit-keyframes chatHours2 {
+  0% {
+    opacity: 0;
+    margin-top: 0vh;
+  }
+  100% {
+    opacity: 100;
+    margin-top: -5vh;
+  }
+}
+@keyframes chatHours2 {
+  0% {
+    opacity: 0;
+    margin-top: 0vh;
+  }
+  100% {
+    opacity: 100;
+    margin-top: -5vh;
+  }
+}
 #headerSm, header, .app-navbar {
-  opacity: 0;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  -webkit-animation: none 1.5s linear 0s;
+          animation: none 1.5s linear 0s;
 }
 
 #Campuses h3, #services h3, #latestNews h3, #upEvents h3 {

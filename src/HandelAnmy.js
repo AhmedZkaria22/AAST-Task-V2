@@ -1,87 +1,67 @@
 let wd = document.body.clientWidth;
 window.addEventListener('resize', ()=>{ wd = document.body.clientWidth });
 
-const handelAnmyElem = (elem, anmyName) => {
+const handelAnmyElem = (elem, anmyName) => {      
       elem.style.animationName = anmyName;
-      // elem.style.opacity = '1';
       setTimeout(() => { elem.style.opacity = '1'; }, 400);
 }
 
-const handelHeadAnmy = (ht1, ht2, hthdsm, ht3, ht4, ht5, ht6, ht7, num) => {
-    // const ht1 = document.getElementsByTagName('header')[0].offsetHeight ,
-    // ht2 = document.querySelector('.scr-no-small').offsetHeight ,
-    // hthdsm = document.querySelector('.scr-small').offsetHeight ,
-    // ht3 = document.querySelector('.AppCarousel').offsetHeight;
-    let totalOffset = 0;
-    if( wd >= 768 ){ totalOffset = ht1 + ht2 + ht3;
-    }else{ totalOffset = hthdsm + ht3; }
-    totalOffset += ht4 + ht5 + ht6 + ht7;
+const handelHeadAnmy = (num) => {
     const trgHd = document.querySelectorAll('h3')[num];
-    if( window.scrollY >= totalOffset ){
-      trgHd.style.opacity = '1';
-      trgHd.style.animationName = 'scHdsAnmy' ;
+    if( window.scrollY >= trgHd.parentElement.offsetTop ){
+      handelAnmyElem(trgHd, 'scHdsAnmy');
     }
 }
 
-const handelCampsAnmy = (ht1, ht2, hthdsm, ht3, ht4h3) => {
-    let totalOffset = 0;
-    if( wd >= 768 ){ totalOffset = ht1 + ht2 + ht3 + ht4h3;
-    }else{ totalOffset = hthdsm + ht3 + ht4h3; }
+const handelCampsAnmy = () => {
     const links = document.querySelectorAll('#Campuses .campuses__container__item a'),
-          imgs = document.querySelectorAll('#Campuses .campuses__container__item img');
-    if( window.scrollY >= totalOffset ){
-      imgs[0].style.opacity = '1';   imgs[0].style.animationName = 'campsImgAnmy';
-      setTimeout(() => {
-        links[0].style.opacity = '1';   links[0].style.animationName = 'campsLnkAnmy';
-      }, 200);
+          imgs = document.querySelectorAll('#Campuses .campuses__container__item img'),
+          trgCamps = document.querySelectorAll('#Campuses .campuses__container__item');
+    if( window.scrollY >= (trgCamps[0].offsetTop - (trgCamps[0].offsetHeight * 0.8)) ){
+      handelAnmyElem(imgs[0], 'campsImgAnmy');
+      setTimeout(() => { handelAnmyElem(links[0], 'campsLnkAnmy'); }, 200);
       for(let i = 1; i<links.length; i++){
-          setTimeout(() => {
-            imgs[i].style.opacity = '1';   imgs[i].style.animationName = 'campsImgAnmy';
+          if( window.scrollY >= (trgCamps[i].offsetTop - (trgCamps[i].offsetHeight * 0.8)) ){
             setTimeout(() => {
-              links[i].style.opacity = '1';   links[i].style.animationName = 'campsLnkAnmy';
-            }, 200);
-          }, 400);
+              handelAnmyElem(imgs[i], 'campsImgAnmy');
+              setTimeout(() => { handelAnmyElem(links[i], 'campsLnkAnmy'); }, 200);
+            }, 400);
+          }
       }
     }
 }
 
-const handelSrvsAnmy = (ht1, ht2, hthdsm, ht3, ht4, ht5h3) => {
-    let totalOffset = 0;
-    if( wd >= 768 ){ totalOffset = ht1 + ht2 + ht3 + ht4 + ht5h3;
-    }else{ totalOffset = hthdsm + ht3 + ht4 + ht5h3; }
-    const srvs = document.querySelectorAll('#services .services__item');
-    if( window.scrollY >= totalOffset ){
-      for(let i = 0; i<srvs.length; i++){
+const handelSrvsAnmy = () => {  
+    const srvs = document.querySelectorAll('#services .services__item');    
+    for(let i = 0; i<srvs.length; i++){
+      if( window.scrollY >= (srvs[i].offsetTop - (srvs[i].offsetHeight * 0.75)) ){
         handelAnmyElem(srvs[i], 'srvsItmsAnmy');          
       }
     }
 }
 
-const handelNewsAnmy = (ht1, ht2, hthdsm, ht3, ht4, ht5, ht6h3) => {
-    let totalOffset = 0;
-    if( wd >= 768 ){ totalOffset = ht1 + ht2 + ht3 + ht4 + ht5 + ht6h3;
-    }else{ totalOffset = hthdsm + ht3 + ht4 + ht5 + ht6h3; }
+const handelNewsAnmy = () => {
     const news = document.querySelectorAll('#latestNews .latestNews__container__item');
     const newsLnk = document.querySelectorAll('#latestNews .latestNews__container__item a');
-    if( window.scrollY >= totalOffset ){
       for(let i = 0; i<news.length; i++){
-        handelAnmyElem(news[i], 'fadeAnmy');   
-        setTimeout(() => {
-            handelAnmyElem(newsLnk[i], 'newsLnkAnmy');            
-        }, 200);
+        if( window.scrollY >= (news[i].offsetTop - (news[i].offsetHeight * 0.3)) ){
+          handelAnmyElem(news[i], 'fadeAnmy');   
+          setTimeout(() => { handelAnmyElem(newsLnk[i], 'newsLnkAnmy'); },200);
+        }
       }
-    }
 }
 
-const handelEvnsAnmy = (ht1, ht2, hthdsm, ht3, ht4, ht5, ht6, ht7h3) => {
-  let totalOffset = 0;
-  if( wd >= 768 ){ totalOffset = ht1 + ht2 + ht3 + ht4 + ht5 + ht6 + ht7h3;
-  }else{ totalOffset = hthdsm + ht3 + ht4 + ht5 + ht6 + ht7h3; }
+const handelEvnsAnmy = () => {
   const evnsDiv = document.querySelectorAll('#upEvents .upEvents__container__item div');
   const evnsP1 = document.querySelectorAll('#upEvents .upEvents__container__item p:first-of-type');
   const evnsP2 = document.querySelectorAll('#upEvents .upEvents__container__item p:last-of-type');
-  if( window.scrollY >= totalOffset ){
+  const evns = document.querySelectorAll('#upEvents .upEvents__container__item');
+  
     for(let i = 0; i<evnsDiv.length; i++){
+      let evht = 0;
+      if( wd >= 768 ){ evht = 1.6;
+      }else{ evht = 0.8; }
+      if( window.scrollY >= (evns[i].offsetTop - (evns[i].offsetHeight * evht)) ){
       handelAnmyElem(evnsDiv[i], 'evnsDivAnmy');   
       setTimeout(() => {
           handelAnmyElem(evnsP1[i], 'evnsPAnmy');
@@ -91,50 +71,33 @@ const handelEvnsAnmy = (ht1, ht2, hthdsm, ht3, ht4, ht5, ht6, ht7h3) => {
   }
 }
 
-const handelDeanImgAnmy = (ht1, ht2, hthdsm, ht3, ht4, ht5, ht6, ht7, ht8) => {
-  let totalOffset = 0;
-  if( wd >= 768 ){ totalOffset = ht1 + ht2 + ht3 + ht4 + ht5 + ht6 + ht7;
-  }else{ totalOffset = hthdsm + ht3 + ht4 + ht5 + ht6 + ht7; }
+const handelDeanImgAnmy = () => {
   const trgEl = document.querySelector('#Deanery img'); 
-  if( window.scrollY >= totalOffset && window.scrollY < totalOffset + ht8 ){ 
+  const trgPr = document.querySelector('#Deanery');
+    if( window.scrollY >= (trgPr.offsetTop - (trgPr.offsetHeight * 0.25)) ){ 
     if( wd >= 768 ){ handelAnmyElem(trgEl, 'deanImgAnmyLg');
     }else{ handelAnmyElem(trgEl, 'deanImgAnmySm'); }       
   }
 }
 
 document.addEventListener('scroll', () => { 
-    const ht1 = document.getElementsByTagName('header')[0].offsetHeight ,
-    ht2 = document.querySelector('.scr-no-small').offsetHeight ,
-    hthdsm = document.querySelector('.scr-small').offsetHeight ,
-    ht3 = document.querySelector('.AppCarousel').offsetHeight,
-    ht4 = document.querySelector('#Campuses').offsetHeight,
-    ht5 = document.querySelector('#services').offsetHeight,
-    ht6 = document.querySelector('#latestNews').offsetHeight,
-    ht7 = document.querySelector('#upEvents').offsetHeight,
-    ht8 = document.querySelector('#Deanery').offsetHeight;
-
-
-
-    const ht4h3 = document.querySelector('#Campuses h3').offsetHeight;
-    const ht5h3 = document.querySelector('#services h3').offsetHeight;
-    const ht6h3 = document.querySelector('#latestNews h3').offsetHeight;
-    const ht7h3 = document.querySelector('#upEvents h3').offsetHeight;
-
-    handelHeadAnmy(ht1, ht2, ht3, hthdsm, 0, 0, 0, 0, 2);     
-    handelHeadAnmy(ht1, ht2, ht3, hthdsm, ht4, 0, 0, 0, 3);
-    handelHeadAnmy(ht1, ht2, ht3, hthdsm, ht4, ht5, 0, 0, 4);     
-    handelHeadAnmy(ht1, ht2, ht3, hthdsm, ht4, ht5, ht6, 0, 5);
-    handelCampsAnmy(ht1, ht2, hthdsm, ht3, ht4h3);
-    handelSrvsAnmy(ht1, ht2, hthdsm, ht3, ht4, ht5h3);
-    handelNewsAnmy(ht1, ht2, hthdsm, ht3, ht4, ht5, ht6h3);
-    handelEvnsAnmy(ht1, ht2, hthdsm, ht3, ht4, ht5, ht6, ht7h3);
-    handelDeanImgAnmy(ht1, ht2, hthdsm, ht3, ht4, ht5, ht6, ht7, ht8);
+    handelHeadAnmy(2);     
+    handelHeadAnmy(3);
+    handelHeadAnmy(4);     
+    handelHeadAnmy(5);
+    handelCampsAnmy();
+    handelSrvsAnmy();
+    handelNewsAnmy();
+    handelEvnsAnmy();
+    handelDeanImgAnmy();
 });
 
 export const handelNavHeadFade = () => {
   const nav = document.querySelector('.scr-no-small'),
         head = document.querySelector('header'),
         hdsm = document.querySelector('#headerSm'); 
-  if( wd >= 768 ){ handelAnmyElem(nav, 'fadeAnmy');   handelAnmyElem(head, 'fadeAnmy');
-  }else{ handelAnmyElem(hdsm, 'fadeAnmy'); } 
+  if( wd >= 768 ){ 
+    nav.style.opacity = '0';  handelAnmyElem(nav, 'fadeAnmy');   
+    head.style.opacity = '0';  handelAnmyElem(head, 'fadeAnmy');
+  }else{ hdsm.style.opacity = '0';   handelAnmyElem(hdsm, 'fadeAnmy'); } 
 }
