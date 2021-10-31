@@ -10,7 +10,6 @@
 
 
 ### Color Scheme
-* ![#f03c15](https://via.placeholder.com/8/f03c15/000000?text=+) `#f03c15`
 * ![#382959](https://via.placeholder.com/8/382959/000000?text=+) `#382959`
 * ![#606060](https://via.placeholder.com/8/606060/000000?text=+) `#606060`
 * ![#16013E](https://via.placeholder.com/8/16013E/000000?text=+) `#16013E`
